@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+ 
+  
+  .tabele {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+  
+  .memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 4px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .4s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.7);
+  }
+  
+  .memory-card:active {
+    transform: scale(0.98);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 9px;
+    background: rgb(78, 175, 255);
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+  .score-panel {
+    text-align: center; 
+    
+    margin-top: 10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+
+.tabele {
+    width: 100%;
+    height: 300px;
+    justify-content: space-around;
+    box-shadow: none;
+}
+
+
+   .memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 4px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .4s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.7);
+  }
+  
+  .memory-card:active {
+    transform: scale(0.98);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 9px;
+    background: rgb(78, 175, 255);
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+  .score-panel {
+    text-align: center; 
+    
+    margin-top: 10px;
+}}
